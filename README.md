@@ -3,3 +3,16 @@ Project Overview: This project demonstrates an end-to-end Data Management soluti
 
 # SATHISH M
 # Optimized summary query for DirectQuery
+
+Table Type	Table Name	Key Columns	Purpose
+Dimension	Customers	CustomerID	Filtering by Name, City, or Country.
+Fact	Orders	OrderID, CustomerID	Tracking the "event" of a sale.
+Fact (Detail)	OrderDetails	OrderID, ProductID	Holding the line-item quantities and prices.
+[ Customers ]           [ Products ]
+            |                       |
+            | (CustomerID)          | (ProductID)
+            |                       |
+      [   Orders    ] <------- [ OrderDetails ]
+            | (OrderID)             
+            |
+       [ Employees ]

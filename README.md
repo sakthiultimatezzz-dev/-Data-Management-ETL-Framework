@@ -8,11 +8,5 @@ Table Type	Table Name	Key Columns	Purpose
 Dimension	Customers	CustomerID	Filtering by Name, City, or Country.
 Fact	Orders	OrderID, CustomerID	Tracking the "event" of a sale.
 Fact (Detail)	OrderDetails	OrderID, ProductID	Holding the line-item quantities and prices.
-[ Customers ]           [ Products ]
-            |                       |
-            | (CustomerID)          | (ProductID)
-            |                       |
-      [   Orders    ] <------- [ OrderDetails ]
-            | (OrderID)             
-            |
-       [ Employees ]
+
+# <img width="341" height="178" alt="image" src="https://github.com/user-attachments/assets/49aac62f-70fa-4db7-a5e6-c659c9228d26" />
